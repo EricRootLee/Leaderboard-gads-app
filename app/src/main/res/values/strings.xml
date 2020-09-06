@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Leaderboard</string>
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">submit</string>
+    <string name="leaders_fragment">Leaders Fragment</string>
+    <string name="skill_IQ_fragment">Skill IQ Fragment</string>
+</resources>
