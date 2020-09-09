@@ -1,4 +1,4 @@
-package com.example.leaderboard;
+package com.example.leaderboard.UIs;
 
 
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.Window;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.leaderboard.R;
 
 import java.util.Objects;
 

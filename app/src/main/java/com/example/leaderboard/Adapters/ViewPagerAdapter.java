@@ -1,14 +1,17 @@
 
-package com.example.leaderboard;
+package com.example.leaderboard.Adapters;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.example.leaderboard.UIs.Learning_LeadersFragment;
+import com.example.leaderboard.UIs.Skill_IQFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
 
