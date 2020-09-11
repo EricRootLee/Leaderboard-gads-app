@@ -61,7 +61,7 @@ public class Learning_LeadersFragment extends Fragment {
         return view;
     }
     private void getLearners() {
-        ApiClient.getClient().getLearningleaders().enqueue(new Callback<List<LearningModel>>() {
+        ApiClient.getClient().getLearningLeaders().enqueue(new Callback<List<LearningModel>>() {
 
             private List<LearningModel> mLearningModelList;
             private LearningAdapter mLearningAdapter;

@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.example.leaderboard.R;
 import com.example.leaderboard.retrofitApi.ApiClient;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -107,7 +109,7 @@ public class SubmissionActivity extends AppCompatActivity {
                         }
 
                         @Override
-                        public void onFailure(Call<Void> call, Throwable t) {
+                        public void onFailure(@NotNull Call<Void> call, Throwable t) {
                             Log.d("TAG","submission failure" + t.getMessage());
                             AlertDialog.Builder alertBuilder = new AlertDialog.Builder(SubmissionActivity.this);
                             AlertDialog alertDialog2 = alertBuilder.create();

@@ -16,7 +16,7 @@ public interface ApiInterface {
 
 
         @GET("api/hours")
-        Call<List<LearningModel>> getLearningLeaders();
+        Call<List<LearningModel>>getLearningLeaders();
 
         @GET("api/skilliq")
         Call<List<Skill_IQModel>>getSkillIqLeaders();

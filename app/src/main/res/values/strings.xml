@@ -14,6 +14,7 @@
     <string name="last_name_hint">Last Name</string>
     <string name="email_address_hint">Email Address</string>
     <string name="github_link_hint">Project on Github (link)</string>
+    <string name="skill_iq_badge">Skill IQ badge</string>
     <string name="are_you_sure">Are You Sure</string>
     <string name="question_mark">question_mark</string>
     <string name="yes_button">Yes</string>
@@ -25,4 +26,5 @@
     <string name="top_learner_name">Top learner name</string>
     <string name="top_learner_hours_and_country">Top learner hours, country</string>
     <string name="learning_hours">Learning hours</string>
+    <string name="submission_not_successful">Submission not successful</string>
 </resources>

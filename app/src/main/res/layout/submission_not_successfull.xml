@@ -34,20 +34,21 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_success" />
+                    app:srcCompat="@drawable/not_succesful"/>
 
                 <TextView
-                    android:id="@+id/text_view_submission_successful"
+                    android:id="@+id/submission_not_successfull"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/submission_successful"
+
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textSize="30sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/image_view_success" />
+                    app:layout_constraintTop_toBottomOf="@+id/image_view_success"
+                    android:gravity="center_horizontal" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </FrameLayout>

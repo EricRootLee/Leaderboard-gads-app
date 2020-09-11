@@ -1,5 +1,7 @@
 package com.example.leaderboard.retrofitApi;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -9,25 +11,38 @@ public class ApiClient {
     private static final String BASE_URL = "https://gadsapi.herokuapp.com";
     public static final String GOOGLE_DOCS_BASE_URL ="https://docs.google.com/forms/d/e/";
 
-    public static ApiClient getClient(){
+    public static ApiInterface getClient(){
+
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        httpClient.addInterceptor(logging);
+
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(httpClient.build())
                     .build();
         }
-        ApiClient apiClient = retrofit.create(ApiClient.class);
-        return apiClient;
+        ApiInterface api = retrofit.create(ApiInterface.class);
+        return api;
     }
-    public static ApiClient getGoogleDocsClient(){
+    public static ApiInterface getGoogleDocsClient(){
+        retrofit = null;
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        httpClient.addInterceptor(logging);
         if (retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(GOOGLE_DOCS_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
+                    .client(httpClient.build())
                     .build();
         }
-        ApiClient apiClient = retrofit.create(ApiClient.class);
-        return apiClient;
+        ApiInterface api = retrofit.create(ApiInterface.class);
+        return api;
     }
 }
 
